@@ -1,0 +1,9 @@
+version: '3.9'  # Use the appropriate version of Docker Compose
+
+services:
+  nginx:
+    image: nginx:latest  # Use the latest NGINX image from Docker Hub
+    ports:
+      - "8004:80"  # Map host port 8004 to container port 80
+    volumes:
+      - ./:/usr/share/nginx/html  # Mount the current folder as a volume in the container
